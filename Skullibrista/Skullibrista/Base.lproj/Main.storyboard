@@ -37,14 +37,49 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ri4-xu-WkW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameOver" translatesAutoresizingMaskIntoConstraints="NO" id="Q54-zt-YeV">
+                                        <rect key="frame" x="107" y="90" width="200" height="148.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Q54-zt-YeV" secondAttribute="height" multiplier="452:336" id="NZN-xH-BUM"/>
+                                            <constraint firstAttribute="width" constant="200" id="pCs-v7-6jZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehx-pg-44C">
+                                        <rect key="frame" x="62" y="583.5" width="290" height="29"/>
+                                        <state key="normal" image="playAgain"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você jogou durante X segundos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glD-pm-Sj0">
+                                        <rect key="frame" x="62" y="459.5" width="290.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" red="0.98857671020000004" green="0.99064368010000003" blue="0.80367237329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ehx-pg-44C" firstAttribute="top" secondItem="glD-pm-Sj0" secondAttribute="bottom" constant="100" id="58l-43-zZT"/>
+                                    <constraint firstItem="ehx-pg-44C" firstAttribute="centerX" secondItem="ri4-xu-WkW" secondAttribute="centerX" id="5GR-dm-TH4"/>
+                                    <constraint firstItem="Q54-zt-YeV" firstAttribute="top" secondItem="ri4-xu-WkW" secondAttribute="top" constant="90" id="bbr-IP-xLg"/>
+                                    <constraint firstItem="ehx-pg-44C" firstAttribute="centerY" secondItem="ri4-xu-WkW" secondAttribute="centerY" constant="150" id="ifm-J4-HfM"/>
+                                    <constraint firstItem="Q54-zt-YeV" firstAttribute="centerX" secondItem="ri4-xu-WkW" secondAttribute="centerX" id="lGd-xg-lod"/>
+                                    <constraint firstItem="glD-pm-Sj0" firstAttribute="centerX" secondItem="ri4-xu-WkW" secondAttribute="centerX" id="laY-JM-NzC"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.90588235294117647" green="0.95686274509803915" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1S7-eg-gbM" firstAttribute="centerY" secondItem="4sO-Pe-h4d" secondAttribute="centerY" id="3hK-IV-M4a"/>
+                            <constraint firstAttribute="bottom" secondItem="ri4-xu-WkW" secondAttribute="bottom" id="4wd-jc-O8x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SsZ-EU-NwW" secondAttribute="trailing" constant="36" id="7pM-UB-eMC"/>
                             <constraint firstItem="1S7-eg-gbM" firstAttribute="centerX" secondItem="4sO-Pe-h4d" secondAttribute="centerX" id="A7t-0j-5FF"/>
+                            <constraint firstItem="ri4-xu-WkW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EgQ-ij-6Xi"/>
                             <constraint firstItem="SsZ-EU-NwW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="GFf-j7-f8Z"/>
+                            <constraint firstItem="ri4-xu-WkW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ko1-2x-mAK"/>
+                            <constraint firstItem="ri4-xu-WkW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KrT-wi-wzM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h2l-Ka-MLL" secondAttribute="trailing" id="Rab-g9-bL0"/>
                             <constraint firstAttribute="bottom" secondItem="4sO-Pe-h4d" secondAttribute="bottom" id="Ruf-AA-flf"/>
                             <constraint firstItem="h2l-Ka-MLL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Wkn-VO-9MC"/>
@@ -62,6 +97,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gameOver" width="226" height="168"/>
+        <image name="playAgain" width="290" height="29"/>
         <image name="player0" width="588" height="1176"/>
         <image name="street" width="1400" height="2800"/>
         <image name="sun" width="1029" height="228"/>
