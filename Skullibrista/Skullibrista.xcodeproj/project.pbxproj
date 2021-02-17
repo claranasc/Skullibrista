@@ -103,8 +103,8 @@
 				2581905E25DDA40C00428E57 /* SceneDelegate.swift */,
 				2581906025DDA40C00428E57 /* ViewController.swift */,
 				2581906225DDA40C00428E57 /* Main.storyboard */,
-				2581906525DDA41000428E57 /* Assets.xcassets */,
 				2581906725DDA41000428E57 /* LaunchScreen.storyboard */,
+				2581906525DDA41000428E57 /* Assets.xcassets */,
 				2581906A25DDA41000428E57 /* Info.plist */,
 			);
 			path = Skullibrista;
