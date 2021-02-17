@@ -50,6 +50,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehx-pg-44C">
                                         <rect key="frame" x="62" y="583.5" width="290" height="29"/>
                                         <state key="normal" image="playAgain"/>
+                                        <connections>
+                                            <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2rs-QG-FUo"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você jogou durante X segundos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glD-pm-Sj0">
                                         <rect key="frame" x="62" y="459.5" width="290.5" height="24"/>
@@ -90,6 +93,13 @@
                             <constraint firstItem="4sO-Pe-h4d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yaq-jy-FW2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lbInstructions" destination="SsZ-EU-NwW" id="9v4-Xz-j9C"/>
+                        <outlet property="lbTimePlayed" destination="glD-pm-Sj0" id="kM3-sZ-9B1"/>
+                        <outlet property="player" destination="1S7-eg-gbM" id="5wf-8J-Z0H"/>
+                        <outlet property="street" destination="4sO-Pe-h4d" id="OfS-1v-QuX"/>
+                        <outlet property="viGameOver" destination="Q54-zt-YeV" id="bw5-Zz-b8j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
