@@ -31,7 +31,17 @@ class ViewController: UIViewController {
         }
         player.animationDuration = 0.5
         player.startAnimating()
+        
+        Timer.scheduledTimer(withTimeInterval: 6.0, repeats: false) { (timer) in
+            self.start()
+        }
     }
+    
+    func start() {
+        lbInstructions.isHidden = true
+        viGameOver.isHidden = true
+    }
+    
     
     @IBAction func playAgain(_ sender: UIButton) {
     }
