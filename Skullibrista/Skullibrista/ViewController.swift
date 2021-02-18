@@ -48,10 +48,11 @@ class ViewController: UIViewController {
         
         if motionManager.isDeviceMotionAvailable {
             motionManager.startDeviceMotionUpdates(to: OperationQueue.main, withHandler: { (data, error) in
-                
                 if error == nil {
                     if let data = data {
                         print("x:", data.gravity.x, "y:", data.gravity.y, "z:", data.gravity.z)
+                        let angle = atan2(data.gravity.x, data.gravity.y) - .pi
+                        self.player.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
                     }
                 }
             })
@@ -60,6 +61,4 @@ class ViewController: UIViewController {
     
     @IBAction func playAgain(_ sender: UIButton) {
     }
-    
-    
 }
