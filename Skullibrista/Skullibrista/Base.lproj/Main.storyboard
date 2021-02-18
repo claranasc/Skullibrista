@@ -98,7 +98,7 @@
                         <outlet property="lbTimePlayed" destination="glD-pm-Sj0" id="kM3-sZ-9B1"/>
                         <outlet property="player" destination="1S7-eg-gbM" id="5wf-8J-Z0H"/>
                         <outlet property="street" destination="4sO-Pe-h4d" id="OfS-1v-QuX"/>
-                        <outlet property="viGameOver" destination="Q54-zt-YeV" id="bw5-Zz-b8j"/>
+                        <outlet property="viGameOver" destination="ri4-xu-WkW" id="De6-bP-b31"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
