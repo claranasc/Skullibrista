@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         viGameOver.isHidden = true
         
         street.frame.size.width = view.frame.size.width * 2
-        street.frame.size.height = view.frame.size.height * 2
+        street.frame.size.height = street.frame.size.width * 2
         street.center = view.center
         
         player.center = view.center
@@ -50,15 +50,18 @@ class ViewController: UIViewController {
         isMoving = false
         stardDate = Date()
         
+        self.player.transform = CGAffineTransform(rotationAngle: 0)
+        self.street.transform = CGAffineTransform(rotationAngle: 0)
+        
         if motionManager.isDeviceMotionAvailable {
             motionManager.startDeviceMotionUpdates(to: OperationQueue.main, withHandler: { (data, error) in
                 if error == nil {
                     if let data = data {
-                        print("x:", data.gravity.x, "y:", data.gravity.y, "z:", data.gravity.z)
+                        //print("x:", data.gravity.x, "y:", data.gravity.y, "z:", data.gravity.z)
                         let angle = atan2(data.gravity.x, data.gravity.y) - .pi
                         self.player.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
                         if !self.isMoving {
-                            //self.checkGameOver()
+                            self.checkGameOver()
                         }
                     }
                 }
